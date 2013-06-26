@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MiniMVP</RootNamespace>
     <AssemblyName>MiniMVP</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,11 +37,11 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contrib\StringExtensions.cs" />
     <Compile Include="Controls\BackgroundTaskUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,7 +59,9 @@
     <Compile Include="Controls\SpinningProgress.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dialog.cs" />
+    <Compile Include="Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Controls\IBackgroundTaskView.cs" />
     <Compile Include="IDialog.cs" />
     <Compile Include="IPresent.cs" />
