@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>derfsplat.MiniMVP</id>
+    <version>0.1.0.0</version>
+    <title>MiniMVP - WinForms MVP Framework</title>
+    <authors>Fred Johanns III</authors>
+    <owners>Fred Johanns III</owners>
+    <summary>Simple framework for binding presenters to WinForm views</summary>
+    <description>See project site for more details https://github.com/derfsplat/MiniMVP</description>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>
+        * 0.1.0.0 Initial release
+        </releaseNotes>
+    <projectUrl>https://github.com/derfsplat/MiniMVP</projectUrl>
+    <iconUrl>https://github.com/derfsplat/MiniMVP/raw/master/logo.png</iconUrl>
+    <tags>mvp winforms framework presenter binding form model view</tags>
+    <language>en-US</language>
+  </metadata>
+  <files>
+    <file src="src\MiniMVP\bin\Debug\MiniMVP.dll" target="lib\net40-client" />
+  </files>
+</package>
