@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace MiniMVP
 {
-    public interface IViewBase : IDisposable
+    public interface IViewBase : IDisposable, IWin32Window
     {
         Func<bool> CanClose { get; set; }
 
