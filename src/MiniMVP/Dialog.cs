@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace MiniMVP
 {
-    public class Dialog : View
+    public class Dialog : View, IDialog
     {
     }
 
-    public class Dialog<T> : View<T>
+    public class Dialog<T> : View<T>, IDialog
         where T: IPresent
     {
         public new void Show()
