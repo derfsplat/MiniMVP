@@ -51,7 +51,12 @@ namespace MiniMVP
             this.Presenter = presenter;
             IsBound = true;
         }
-    }
+
+		public new IWin32Window Owner
+		{
+			get { return base.Owner; }
+		}
+	}
 
     public abstract class View<T> : View, IView
         where T: IPresent

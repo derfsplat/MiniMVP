@@ -22,6 +22,8 @@ namespace MiniMVP
 
     public interface IView : IViewBase
     {
-        void Bind<T>(T presenter) where T : IPresent;
+		IWin32Window Owner { get; }
+
+		void Bind<T>(T presenter) where T : IPresent;
     }
 }
