@@ -24,6 +24,8 @@ namespace MiniMVP
     {
 		IWin32Window Owner { get; }
 
-		void Bind<T>(T presenter) where T : IPresent;
+		event FormClosedEventHandler FormClosed;
+
+        void Bind<T>(T presenter) where T : IPresent;
     }
 }

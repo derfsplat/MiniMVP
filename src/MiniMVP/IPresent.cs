@@ -7,21 +7,19 @@ using System.Windows.Forms;
 namespace MiniMVP
 {
     /// <summary>
-    /// Base interface for all presenters
+    /// Presenter for non-modal view
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IPresent
     {
-        
+		void Show();
     }
 
-    public interface IPresentMdiChild : IPresent
-    {
-        void Show();
-    }
-
+	/// <summary>
+	/// Presenter for modal view
+	/// </summary>
     public interface IPresentDialog : IPresent
     {
-        DialogResult Show();
+        new DialogResult Show();
     }
 }
