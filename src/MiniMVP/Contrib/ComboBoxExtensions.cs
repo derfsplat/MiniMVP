@@ -33,7 +33,7 @@ namespace MiniMVP.Contrib
                 if (cbo.SelectedValue.GetType() == typeof(T))
                     return (T)cbo.SelectedValue;
             }
-            else if(cbo.SelectedItem != null && cbo.ValueMember.IsNullOrWhiteSpace())
+            else if(cbo.SelectedItem != null && !cbo.ValueMember.IsNullOrWhiteSpace())
             {
                 var pi = cbo.SelectedItem.GetType().GetProperty(cbo.ValueMember, System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
                 if (pi != null && pi.PropertyType == typeof(T))
