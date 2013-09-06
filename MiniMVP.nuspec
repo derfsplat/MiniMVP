@@ -2,7 +2,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>derfsplat.MiniMVP</id>
-    <version>0.1.1.0</version>
+    <version>0.1.2.0</version>
     <title>MiniMVP - WinForms MVP Framework</title>
     <authors>Fred Johanns III</authors>
     <owners>Fred Johanns III</owners>
@@ -10,6 +10,7 @@
     <description>See project site for more details https://github.com/derfsplat/MiniMVP</description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>
+        * 0.1.2.0 Minor bug fix / cbo selected value
         * 0.1.1.0 Added non-modal/mdi child presenter support
         * 0.1.0.0 Initial release
         </releaseNotes>
