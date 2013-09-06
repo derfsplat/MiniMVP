@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMVP", "MiniMVP\MiniMVP.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMVP.Samples", "MiniMVP.Samples\MiniMVP.Samples.csproj", "{13612B0D-8DD1-4EC0-A605-C9DD538FFCA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniMVP.Tests", "MiniMVP.Tests\MiniMVP.Tests.csproj", "{366939FE-B62E-4FEF-8696-7259F820F3CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{13612B0D-8DD1-4EC0-A605-C9DD538FFCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13612B0D-8DD1-4EC0-A605-C9DD538FFCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13612B0D-8DD1-4EC0-A605-C9DD538FFCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366939FE-B62E-4FEF-8696-7259F820F3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366939FE-B62E-4FEF-8696-7259F820F3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366939FE-B62E-4FEF-8696-7259F820F3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366939FE-B62E-4FEF-8696-7259F820F3CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
