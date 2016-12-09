@@ -17,19 +17,21 @@ namespace MiniMVP.Samples
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-			MainForm mainForm = null;
-			IoC.Register<Func<MainForm>>(() =>
-				{
-					mainForm = new MainForm();
-					return mainForm;
-				});
+      MainForm mainForm = new MainForm();
+      IoC.Register<Func<MainForm>>(() => mainForm);
 			IoC.Register<Func<ISampleDialogView>>(() => new SampleDialog());
-			IoC.Register<IPresentSampleDialog>(new SampleDialogPresenter(IoC.Get<Func<ISampleDialogView>>()));
-			IoC.Register<IPresentMainForm>(new MainFormPresenter(IoC.Get<Func<MainForm>>(), IoC.Get<IPresentSampleDialog>()));
+      //TODO: create main form helper/view as 1st class citizen in mvp framework to remove need for mainForm ref here
+      IoC.Register<IMainForm>(mainForm);
+      IoC.Register<IPresentSampleDialog>(
+        new SampleDialogPresenter(IoC.Get<Func<ISampleDialogView>>(), IoC.Get<IMainForm>()));
+
+      IoC.Register<IPresentMainForm>(new MainFormPresenter(IoC.Get<Func<MainForm>>(), IoC.Get<IPresentSampleDialog>()));
 
 			var mfPresenter = IoC.Get<IPresentMainForm>();
 			mfPresenter.Show();
-			Application.Run(mainForm);
+
+      
+      Application.Run(mfPresenter.MainForm);
 		}
 
 		static class IoC

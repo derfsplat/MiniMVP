@@ -17,11 +17,16 @@ namespace MiniMVP.Samples
 			this.dialogPresenter = dialogPresenter;
 		}
 
-		#region IPresentMainForm Members
+	  public MainForm MainForm
+	  {
+	    get { return View as MainForm; }
+	  }
 
-		public void ShowDialogSample()
+    #region IPresentMainForm Members
+
+    public void ShowDialogSample()
 		{
-			if(dialogPresenter.ShowDialog(View, new SimpleDataModel() { Title = View.Title }) == DialogResult.OK)
+			if(dialogPresenter.ShowDialog(new SimpleDataModel() { Title = View.Title }) == DialogResult.OK)
 				View.Title = dialogPresenter.TitleModel.Title;
 		}
 
@@ -31,5 +36,7 @@ namespace MiniMVP.Samples
 	public interface IPresentMainForm : IPresent
 	{
 		void ShowDialogSample();
+
+	  MainForm MainForm { get; }
 	}
 }

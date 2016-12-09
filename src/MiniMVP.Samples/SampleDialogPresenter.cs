@@ -9,18 +9,18 @@ namespace MiniMVP.Samples
 {
 	public class SampleDialogPresenter : DialogPresenter<ISampleDialogView>, IPresentSampleDialog
 	{
-		SimpleDataModel model;
+	  private readonly IMainForm owner;
+	  SimpleDataModel model;
 
-		public SampleDialogPresenter(Func<ISampleDialogView> viewFactory)
+		public SampleDialogPresenter(Func<ISampleDialogView> viewFactory, IMainForm owner)
 			: base(viewFactory)
 		{
-
+		  this.owner = owner;
 		}
 
-		#region IPresentSampleDialog Members
+	  #region IPresentSampleDialog Members
 
-		//todo: have mainform implement IHostWinForms iface so we can get owner via IHOstWinForms dep passed to ctor
-		public DialogResult ShowDialog(IWin32Window owner, SimpleDataModel model)
+		public DialogResult ShowDialog(SimpleDataModel model)
 		{
 			this.model = model;
 
@@ -55,7 +55,7 @@ namespace MiniMVP.Samples
 
 	public interface IPresentSampleDialog : IPresentDialog
 	{
-		DialogResult ShowDialog(IWin32Window owner, SimpleDataModel model);
+		DialogResult ShowDialog(SimpleDataModel model);
 		SimpleDataModel TitleModel { get; }
 	}
 }

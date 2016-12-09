@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="Controls\IBackgroundTaskView.cs" />
     <Compile Include="IDialog.cs" />
+    <Compile Include="IMainForm.cs" />
     <Compile Include="IPresent.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="Presenter.cs" />
