@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MiniMVP.Samples
 {
-	public partial class MainForm : View<IPresentMainForm>, IViewMainForm
+	public partial class MainForm : MainFormDesignable, IViewMainForm, IMainForm
 	{
 		public MainForm()
 		{
@@ -48,4 +48,9 @@ namespace MiniMVP.Samples
 	{
 		string Title { get; set; }
 	}
+
+  //This allows the WinForms designer to load the form
+  public class MainFormDesignable : View<IPresentMainForm>
+  {
+  }
 }
