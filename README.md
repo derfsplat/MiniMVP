@@ -51,3 +51,15 @@ __Create `SimpleDialog` as a new form in your project:__
 Seen [here](https://github.com/derfsplat/MiniMVP/blob/master/src/MiniMVP.Samples/MainForm.cs#L22).
 
 That's it.  You're ready to go.
+
+Designer Support When Inheriting Generic View Classes
+-----------------------------------------------------
+Create a dummy non-generic class to appease the designer.
+```csharp
+		public partial class MainForm : MainFormDesignable { }
+
+		//This gives the WinForms designer a default constructor which allows it to load the form
+		public class MainFormDesignable : View<IPresentMainForm> {}
+```
+
+Seen [here](https://github.com/derfsplat/MiniMVP/blob/master/src/MiniMVP.Samples/MainForm.cs#L53)
